@@ -219,9 +219,6 @@ document.addEventListener('DOMContentLoaded', () => {
       emailInput.classList.remove('error');
       emailInput.classList.add('success');
 
-      alert("Rahmat! Obuna bo'ldingiz.");
-
-
       emailInput.value = "";
 
 
@@ -240,5 +237,54 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
+
+
+let productImg2 = document.querySelectorAll(".img_box1"),
+  title2 = document.querySelectorAll(".p1"),
+  desc2 = document.querySelectorAll(".span1"),
+  Korinka2 = document.querySelector(".salom100"),
+  btn2 = document.querySelectorAll(".yurak");
+
+btn2.forEach((item, id) => {
+  item.addEventListener("click", () => {
+    let newImgProduct = productImg2[id].src;
+    let newTitle = title2[id].textContent;
+    let newDesc = desc2[id].textContent;
+
+    let newProduct = document.createElement("div");
+    newProduct.setAttribute("class", "tttt");
+
+    newProduct.innerHTML = `
+      <div class="item-prod-img">
+        <img src="${newImgProduct}" alt="no">
+      </div>
+      <article class="item-prod-info2">
+        <p>${newTitle}</p>
+        <span>${newDesc}</span>
+      </article>
+      <button class="remove10">remove</button>
+    `;
+
+
+
+    let removeBtn = newProduct.querySelector(".remove10");
+
+
+    removeBtn.addEventListener("click", () => {
+      newProduct.remove();
+    });
+
+
+    Korinka2.append(newProduct);
+  });
+});
+
+
+let sss= document.querySelector(".sec1")
+let ssss= document.querySelector(".s")
+
+sss.addEventListener("click" , ()=>{
+  ssss.classList.toggle("active")
+})
 
 
