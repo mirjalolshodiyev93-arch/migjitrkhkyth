@@ -23,30 +23,30 @@ sec3.addEventListener("click", () => {
   li_box4.classList.toggle("active");
 })
 
-var swiper = new Swiper(".mySwiper", {
-  navigation: {
-    nextEl: ".btn_left",
-    prevEl: ".btn_rigt",
-  },
-  // Ekran o'lchamiga qarab slaydlarni moslashtirish
-  breakpoints: {
-    // Ekran 320px dan katta bo'lganda (Telefon)
-    320: {
-      slidesPerView: 2,
-      spaceBetween: 10
-    },
-    // Ekran 768px dan katta bo'lganda (Planshet)
-    649: {
-      slidesPerView: 3,
-      spaceBetween: 20
-    },
+// var swiper = new Swiper(".mySwiper", {
+//   navigation: {
+//     nextEl: ".btn_left",
+//     prevEl: ".btn_rigt",
+//   },
+//   // Ekran o'lchamiga qarab slaydlarni moslashtirish
+//   breakpoints: {
+//     // Ekran 320px dan katta bo'lganda (Telefon)
+//     320: {
+//       slidesPerView: 2,
+//       spaceBetween: 10
+//     },
+//     // Ekran 768px dan katta bo'lganda (Planshet)
+//     649: {
+//       slidesPerView: 3,
+//       spaceBetween: 20
+//     },
 
-    900: {
-      slidesPerView: 4,
-      spaceBetween: 30
-    }
-  }
-});
+//     900: {
+//       slidesPerView: 4,
+//       spaceBetween: 30
+//     }
+//   }
+// });
 
 
 const slider = document.getElementById('categorySlider');
@@ -156,7 +156,7 @@ document.addEventListener('DOMContentLoaded', function () {
           emailInput.classList.remove("active2")
           add1.classList.remove("active2")
         }, 2000);
-        
+
         return;
       }
 
@@ -169,7 +169,7 @@ document.addEventListener('DOMContentLoaded', function () {
       }
 
       if (passwordValue.length < 6) {
-      add1.classList.add("active2")
+        add1.classList.add("active2")
         setTimeout(() => {
           add1.classList.remove("active2")
         }, 2000);
@@ -244,9 +244,14 @@ let productImg2 = document.querySelectorAll(".img_box1"),
   desc2 = document.querySelectorAll(".span1"),
   Korinka2 = document.querySelector(".salom100"),
   btn2 = document.querySelectorAll(".yurak");
+  gfr = document.querySelector(".commons1")
 
 btn2.forEach((item, id) => {
   item.addEventListener("click", () => {
+    gfr.classList.add("active")
+    setTimeout(() => {
+      gfr.classList.remove("active")
+    }, 1500);
     let newImgProduct = productImg2[id].src;
     let newTitle = title2[id].textContent;
     let newDesc = desc2[id].textContent;
@@ -280,10 +285,10 @@ btn2.forEach((item, id) => {
 });
 
 
-let sss= document.querySelector(".sec1")
-let ssss= document.querySelector(".s")
+let sss = document.querySelector(".sec1")
+let ssss = document.querySelector(".s")
 
-sss.addEventListener("click" , ()=>{
+sss.addEventListener("click", () => {
   ssss.classList.toggle("active")
 })
 
