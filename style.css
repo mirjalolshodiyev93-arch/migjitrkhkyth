@@ -10,6 +10,57 @@
   padding: 0px 10px;
 }
 
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.autoplay-progress {
+  position: absolute;
+  right: 16px;
+  bottom: 16px;
+  z-index: 10;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  color: var(--swiper-theme-color);
+}
+
+.autoplay-progress svg {
+  --progress: 0;
+  position: absolute;
+  left: 0;
+  top: 0px;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  stroke-width: 4px;
+  stroke: var(--swiper-theme-color);
+  fill: none;
+  stroke-dashoffset: calc(125.6px * (1 - var(--progress)));
+  stroke-dasharray: 125.6;
+  transform: rotate(-90deg);
+}
+
 body {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   position: relative;
@@ -46,6 +97,7 @@ nav {
 
 .s {
   margin-bottom: 80px;
+  display: none;
 }
 
 .input_box input {
@@ -233,7 +285,7 @@ nav {
   right: 0;
 }
 
-.yurak{
+.yurak {
   background-color: rgba(255, 0, 0, 0.415);
   padding: 10px;
   position: absolute;
@@ -270,7 +322,7 @@ nav {
   display: none;
 }
 
-.dddd{
+.dddd {
   display: flex;
 }
 
@@ -490,7 +542,7 @@ nav {
 .swiper-slide {
   text-align: center;
   font-size: 18px;
-
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -511,7 +563,7 @@ nav {
 
 
 .d1 {
-  padding: 82px 0px 119px 0px;
+  padding: 82px 50px 119px 0px;
   display: flex;
   gap: 100px;
   justify-content: center;
@@ -552,10 +604,15 @@ nav {
 .rasm10 {
   position: relative;
   z-index: 99;
+  width: 1000px;
+  margin-right: 200px;
 }
 
 .box8 {
   padding: 20px 0px;
+  display: flex;
+  align-items: start;
+  flex-direction: column;
 }
 
 .box8 p {
@@ -572,6 +629,7 @@ nav {
   line-height: 110%;
   color: #272343;
   margin-bottom: 24px;
+  text-align: start;
 }
 
 .section-header {
@@ -608,7 +666,7 @@ nav {
   margin-bottom: 100px;
 }
 
-/* Umumiy sozlamalar */
+
 * {
   margin: 0;
   padding: 0;
@@ -621,11 +679,6 @@ body {
 
 }
 
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
 
 /* Sarlavha qismi */
 .section-header {
@@ -886,13 +939,13 @@ body {
   font-size: 20px;
 }
 
-.s{
+.s {
   position: relative;
   display: none;
 }
 
-.s.active{
-  display: block;
+.s.active {
+ display: block;
 }
 
 .div2 {
@@ -906,15 +959,15 @@ body {
   display: none;
 }
 
-.tttt{
-display: flex;
-width: 100%;
-justify-content: space-between;
-gap: 10px;
-background-color:rgba(128, 128, 128, 0.532);
-margin-bottom: 20px;
-padding: 20px 20px;
-border-radius: 10px;
+.tttt {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  gap: 10px;
+  background-color: rgba(128, 128, 128, 0.532);
+  margin-bottom: 20px;
+  padding: 20px 20px;
+  border-radius: 10px;
 }
 
 .tttt button {
@@ -934,14 +987,14 @@ border-radius: 10px;
 }
 
 
-.salom100{
+.salom100 {
   position: absolute;
   top: 70px;
   left: 0;
   padding: 10px 10px;
   width: 390px;
   height: 400px;
-  background-color:#E1E3E5;
+  background-color: #E1E3E5;
   z-index: 999999999;
   border-radius: 20px;
   display: flex;
@@ -951,6 +1004,8 @@ border-radius: 10px;
   overflow-x: hidden;
   border: 1px solid grey;
 }
+
+
 
 .div10 {
   position: relative;
@@ -969,7 +1024,7 @@ border-radius: 10px;
   padding: 100px;
   border-radius: 20px;
   padding: 20px 10px;
-  background-color:#F0F2F3;
+  background-color: #F0F2F3;
   width: 390px;
   display: flex;
   align-items: center;
@@ -1083,12 +1138,6 @@ main.active {
   padding: 0;
   box-sizing: border-box;
   font-family: 'Inter', sans-serif;
-}
-
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
 }
 
 .footer {
@@ -1391,28 +1440,29 @@ main.active {
 
 }
 
-.input1.active{
-  border: 1px solid rgb(0, 255, 34) ;
+.input1.active {
+  border: 1px solid rgb(0, 255, 34);
 }
 
-.input1.active2{
-  border: 1px solid red ;
+.input1.active2 {
+  border: 1px solid red;
 }
 
 
-.ar9.active{
-  border: 1px solid rgb(0, 255, 34) ;
+.ar9.active {
+  border: 1px solid rgb(0, 255, 34);
 }
 
-.ar9.active2{
-  border: 1px solid red ;
+.ar9.active2 {
+  border: 1px solid red;
 }
 
-#checkbox.active{
-   border: 1px solid rgb(0, 255, 34) ;
+#checkbox.active {
+  border: 1px solid rgb(0, 255, 34);
 }
-#checkbox.active2{
-   border: 1px solid red;
+
+#checkbox.active2 {
+  border: 1px solid red;
 }
 
 .li_box4 li {
@@ -1450,7 +1500,7 @@ main.active {
   gap: 20px;
   background-color: rgba(0, 0, 0, 0.219);
   margin-bottom: 30px;
-  width:100%;
+  width: 100%;
 
 }
 
@@ -1485,7 +1535,7 @@ main.active {
 }
 
 
-.commons1{
+.commons1 {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1498,13 +1548,13 @@ main.active {
   opacity: 0;
 }
 
-.commons1.active{
+.commons1.active {
   opacity: 1;
   left: 20px;
 }
 
-.search2{
-  color:black;
+.search2 {
+  color: black;
   font-size: 20px;
 }
 
@@ -1555,6 +1605,10 @@ main.active {
 
   .box8 h1 {
     font-size: 30px;
+  }
+
+  .rasm10{
+    margin-right: 10px;
   }
 
 
@@ -1614,6 +1668,14 @@ main.active {
     display: none;
   }
 
+  .box8{
+    align-items: center;
+  }
+
+  .box8 h1{
+   text-align: center;
+  }
+
   .d1 {
     gap: 0;
   }
@@ -1642,16 +1704,17 @@ main.active {
 }
 
 @media (max-width:410px) {
-  #cart-display{
+  #cart-display {
     top: 140px;
   }
 
-  .salom100{
+  .salom100 {
     top: 130px;
   }
+
   .div2 {
-     width: 100%;
-  height: 100%;
+    width: 100%;
+    height: 100%;
     align-items: center;
     background-color: #F0F2F3;
     position: fixed;
@@ -1671,4 +1734,3 @@ main.active {
   .sec4 {
     gap: 10px;
   }
-}
