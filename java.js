@@ -317,4 +317,3 @@ const progressCircle = document.querySelector(".autoplay-progress svg");
         }
       }
     });
-
